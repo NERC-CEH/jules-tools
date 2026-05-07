@@ -134,8 +134,6 @@ There is no one-size-fits-all for these steps, but I would like to make some pro
 
 ## Contributing
 
-Contributions are very welcome. Please feel free to raise an issue or open a pull request.
-
-> [!IMPORTANT]
-> This is essentially a by-product of my work on other projects. This development model is unlikely to change going forward.
+This project is archived so won't be updated.
+If you want to contribute to a similar project that's still a work in progress, please take a look at `julesconf`.
 
