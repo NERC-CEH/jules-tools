@@ -631,7 +631,6 @@ version = "0.2.0"
 source = { editable = "." }
 dependencies = [
     { name = "f90nml" },
-    { name = "metaconf" },
     { name = "netcdf4" },
     { name = "numpy" },
     { name = "pandas" },
@@ -658,7 +657,6 @@ requires-dist = [
     { name = "f90nml", specifier = ">=1.4.5" },
     { name = "jupyter", marker = "extra == 'jupyter'", specifier = ">=1.1.1" },
     { name = "jupytext", marker = "extra == 'jupyter'", specifier = ">=1.17.2" },
-    { name = "metaconf", git = "https://github.com/jmarshrossney/dirconf?rev=metaconf" },
     { name = "netcdf4", specifier = ">=1.7.2" },
     { name = "numpy", specifier = ">=2.3.1" },
     { name = "pandas", specifier = ">=2.3.1" },
@@ -990,11 +988,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec9
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979, upload-time = "2022-08-14T12:40:09.779Z" },
 ]
-
-[[package]]
-name = "metaconf"
-version = "0.3.1"
-source = { git = "https://github.com/jmarshrossney/dirconf?rev=metaconf#a01708eb453aaf239ec0fe597c97539101c3a90b" }
 
 [[package]]
 name = "mistune"
