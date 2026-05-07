@@ -1,12 +1,12 @@
 from pathlib import Path
 import tempfile
 
-from metaconf import Handler
 import numpy
 import pytest
 
 from jules_tools.config import *
 from jules_tools.utils import switch_dir
+from jules_tools._vendor.metaconf import Handler
 
 
 @pytest.mark.parametrize(

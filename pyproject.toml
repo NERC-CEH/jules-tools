@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jules_tools"
-version = "0.2.0"
+version = "0.3.0"
 authors = [
     {name = "Joe Marsh Rossney", email = "17361029+jmarshrossney@users.noreply.github.com"}
 ]
@@ -13,7 +13,6 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "f90nml>=1.4.5",
-    "metaconf",
     "netcdf4>=1.7.2",
     "numpy>=2.3.1",
     "pandas>=2.3.1",
@@ -51,6 +50,3 @@ target-version = "py311"
 
 [tool.jupytext]
 formats = "ipynb,md"
-
-[tool.uv.sources]
-metaconf = { git = "https://github.com/jmarshrossney/dirconf", rev = "metaconf" }

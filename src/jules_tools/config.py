@@ -3,10 +3,11 @@ from os import PathLike
 import pathlib
 from typing import TypedDict
 
-import metaconf
 import f90nml
 import numpy
 import xarray
+
+from ._vendor import metaconf
 
 logger = logging.getLogger(__name__)
 

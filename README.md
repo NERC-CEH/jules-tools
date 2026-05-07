@@ -1,5 +1,12 @@
 # Jules Tools
 
+> [!WARNING]
+> This project is archived and will no longer receive updates.
+> 
+> Parts of this toolkit are being carried over to a new project, `julesconf`, which has a narrower focus on JULES configuration management rather than the broader toolkit scope of this project. However, `julesconf` will require Python versions more recent than 3.11, and will therefore not (as of May 2026) work on DataLabs.
+> 
+> If you are running on DataLabs or another Python 3.11 environment, you should continue to use this package.
+
 The [Joint UK Land Environment Simulator](https://jules.jchmr.org/) (JULES) is a [land surface model](https://en.wikipedia.org/wiki/Land_surface_models_(climate)) that has been developed over the last 20 years by a community of UK researchers coordinated by the [Met Office](https://www.metoffice.gov.uk/) and the [UK Centre for Ecology & Hydrology](https://www.ceh.ac.uk/).
 
 The purpose of this package is to collect useful Python tools for working with JULES.
@@ -76,10 +83,6 @@ handler.write("/path/to/new/location/", config)
 
 For explanation and further details you may be interested in the [`metaconf` documentation](https://jmarshrossney.github.io/dirconf/) and specifically the [Jules example](https://jmarshrossney.github.io/dirconf/examples/jules).
 
-> [!NOTE]
-> `metaconf` has been renamed to `dirconf` and is no longer compatible with Python version 3.11, which is
-> still the only Python version offered on DataLabs (as of May 2026). This package now pins `metaconf`
-> at a specific commit, before the minimum version was changed to Python 3.12.
 
 ### Runners (`runners.py`)
 
@@ -124,11 +127,13 @@ There is no one-size-fits-all for these steps, but I would like to make some pro
 
 - [jmarshrossney/metaconf](https://github.com/jmarshrossney/dirconf/tree/metaconf): a package for working with multi-file configurations such as those used by Jules (used by `jules_tools`)
 
+> [!NOTE]
+> `metaconf` has been renamed to `dirconf` and is no longer compatible with Python version 3.11, which is
+> still the only Python version offered on DataLabs (as of May 2026). This package now ships with a 
+> version of `metaconf` pinned at a specific commit, before the minimum version was changed to Python 3.12.
 
 ## Contributing
 
-Contributions are very welcome. Please feel free to raise an issue or open a pull request.
-
-> [!IMPORTANT]
-> This is essentially a by-product of my work on other projects. This development model is unlikely to change going forward.
+This project is archived so won't be updated.
+If you want to contribute to a similar project that's still a work in progress, please take a look at `julesconf`.
 
