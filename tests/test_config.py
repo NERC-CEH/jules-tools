@@ -111,11 +111,12 @@ def test_read_ascii_old(suffix):
 
     handler = AsciiFileHandler()
 
-    with tempfile.NamedTemporaryFile(suffix=suffix, delete_on_close=False) as tmp:
+    with tempfile.NamedTemporaryFile(suffix=suffix, delete=False) as tmp:
         with open(tmp.name, "w") as file:
             file.write(file_contents)
 
         data = handler.read(tmp.name)
+        Path(tmp.name).unlink()
 
     assert isinstance(data, dict)
 
