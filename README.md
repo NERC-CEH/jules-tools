@@ -2,7 +2,7 @@
 
 The [Joint UK Land Environment Simulator](https://jules.jchmr.org/) (JULES) is a [land surface model](https://en.wikipedia.org/wiki/Land_surface_models_(climate)) that has been developed over the last 20 years by a community of UK researchers coordinated by the [Met Office](https://www.metoffice.gov.uk/) and the [UK Centre for Ecology & Hydrology](https://www.ceh.ac.uk/).
 
-The purpose of this package is to collect useful Python tools for working with Jules.
+The purpose of this package is to collect useful Python tools for working with JULES.
 
 
 ## Getting started
@@ -21,11 +21,32 @@ You can now run the tests in the repository root with
 uv run pytest
 ```
 
+## Examples
+
+Example notebooks are stored as markdown files and need to be converted before running.
+First install the optional Jupyter dependencies:
+
+```sh
+uv sync --extra jupyter
+```
+
+Convert the markdown example to a notebook:
+
+```sh
+uv run jupytext --to notebook examples/config.md -o examples/config.ipynb
+```
+
+Then launch the notebook:
+
+```sh
+uv run jupyter notebook examples/config.ipynb
+```
+
 ## Package overview
 
 ### Configuration (`config.py`)
 
-This module defines Python [dataclasses](https://docs.python.org/3/library/dataclasses.html) that essentially act as a read/write interface for Jules configurations, leaning heavily on the [`metaconf`](https://github.com/jmarshrossney/metaconf) package. 
+This module defines Python [dataclasses](https://docs.python.org/3/library/dataclasses.html) that essentially act as a read/write interface for Jules configurations, leaning heavily on the [`metaconf`](https://github.com/jmarshrossney/dirconf/tree/metaconf) package. 
 
 ```python
 from jules_tools.config import InputFilesConfig, JulesConfig
@@ -53,7 +74,12 @@ config = handler.read("path/to/loobos/config/")
 handler.write("/path/to/new/location/", config)
 ```
 
-For explanation and further details you may be interested in the [`metaconf` documentation](https://jmarshrossney.github.io/metaconf/) and specifically the [Jules example](https://jmarshrossney.github.io/metaconf/examples/jules/notebook/).
+For explanation and further details you may be interested in the [`metaconf` documentation](https://jmarshrossney.github.io/dirconf/) and specifically the [Jules example](https://jmarshrossney.github.io/dirconf/examples/jules).
+
+> ![NOTE]
+> `metaconf` has been renamed to `dirconf` and is no longer compatible with Python version 3.11, which is
+> still the only Python version offered on DataLabs (as of May 2026). This package now pins `metaconf`
+> at a specific commit, before the minimum version was changed to Python 3.12.
 
 ### Runners (`runners.py`)
 
@@ -96,7 +122,7 @@ There is no one-size-fits-all for these steps, but I would like to make some pro
 
 - [NERC-CEH/jules-academy](https://github.com/NERC-CEH/jules-academy): a notebook-based training course on Jules (uses `jules_tools`).
 
-- [jmarshrossney/metaconf](https://github.com/jmarshrossney/metaconf): a package for working with multi-file configurations such as those used by Jules (used by `jules_tools`)
+- [jmarshrossney/metaconf](https://github.com/jmarshrossney/dirconf/tree/metaconf): a package for working with multi-file configurations such as those used by Jules (used by `jules_tools`)
 
 
 ## Contributing
