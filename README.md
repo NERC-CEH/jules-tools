@@ -76,7 +76,7 @@ handler.write("/path/to/new/location/", config)
 
 For explanation and further details you may be interested in the [`metaconf` documentation](https://jmarshrossney.github.io/dirconf/) and specifically the [Jules example](https://jmarshrossney.github.io/dirconf/examples/jules).
 
-> ![NOTE]
+> [!NOTE]
 > `metaconf` has been renamed to `dirconf` and is no longer compatible with Python version 3.11, which is
 > still the only Python version offered on DataLabs (as of May 2026). This package now pins `metaconf`
 > at a specific commit, before the minimum version was changed to Python 3.12.
